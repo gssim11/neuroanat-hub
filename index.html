@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신경해부학 학습 허브 · 2026-2 — Ch01~Ch13 핵심요약</title>
+<meta name="description" content="안산대학교 물리치료학과 2026-2 신경해부학 강의록 Ch01~Ch13 학생 배포용 핵심요약 모음. 챕터별 요약·확인문제를 한 곳에서 봅니다.">
+<meta name="author" content="심경섭">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="안산대학교 물리치료학과">
+<meta property="og:title" content="신경해부학 학습 허브 · 2026-2">
+<meta property="og:description" content="Ch01~Ch13 챕터별 핵심요약과 확인문제를 한 곳에서. 강의록과 대조한 학생 배포용 자료.">
+<!-- og 주소는 절대경로여야 카카오톡·LMS 미리보기가 뜹니다. 배포 주소가 바뀌면 이 두 줄만 고칩니다. -->
+<meta property="og:url" content="https://neuroanat-hub.vercel.app/">
+<meta property="og:image" content="https://neuroanat-hub.vercel.app/og-image-hub.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --c-primary:#2563eb; --c-primary-strong:#1d4ed8; --c-primary-deep:#17255a;
+  --c-primary-050:#eff5ff; --c-primary-100:#dbe7fe; --c-primary-border:#cfe0fb;
+  --ink:#0f172a; --ink-2:#334155; --ink-3:#64748b; --ink-4:#94a3b8;
+  --bg:#eef2f8; --surface:#ffffff; --line:#e6eaf1;
+  --amber:#f59e0b; --amber-bg:#fffbeb;
+  --green:#16a34a; --green-bg:#f0fdf4;
+  --violet:#7c3aed; --violet-bg:#f5f3ff; --violet-border:#ddd6fe;
+  --r-sm:8px; --r-md:12px; --r-lg:16px; --r-pill:999px;
+  --sh-sm:0 1px 2px rgba(15,23,42,.06), 0 1px 3px rgba(15,23,42,.07);
+  --sh-md:0 6px 18px -6px rgba(15,23,42,.12), 0 2px 6px -2px rgba(15,23,42,.06);
+  --sh-lg:0 18px 40px -12px rgba(15,23,42,.20);
+  color-scheme: light;
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --c-primary:#7aa2ff; --c-primary-strong:#9dbcff; --c-primary-deep:#d6e0ff;
+  --c-primary-050:rgba(122,162,255,.12); --c-primary-100:rgba(122,162,255,.18); --c-primary-border:rgba(122,162,255,.34);
+  --ink:#e9edfb; --ink-2:#c6cee7; --ink-3:#9aa4c4; --ink-4:#727c9c;
+  --bg:#070a18; --surface:rgba(18,23,44,.72); --line:rgba(165,183,232,.15);
+  --amber:#fbbf24; --amber-bg:rgba(245,158,11,.13);
+  --green:#34d399; --green-bg:rgba(52,211,153,.12);
+  --violet:#c4b5fd; --violet-bg:rgba(167,139,250,.13); --violet-border:rgba(167,139,250,.34);
+  --sh-sm:0 1px 2px rgba(0,0,0,.5); --sh-md:0 10px 30px -10px rgba(0,0,0,.6); --sh-lg:0 24px 55px -18px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; padding:0;
+  font-family:'Pretendard','Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo',system-ui,-apple-system,sans-serif;
+  color:var(--ink-2); background:var(--bg); line-height:1.7; letter-spacing:-.01em;
+}
+#cosmos{position:fixed; inset:0; z-index:-1; pointer-events:none;}
+:root:not([data-theme="dark"]) #cosmos{
+  background:
+    radial-gradient(1200px 720px at 10% -8%, rgba(129,140,248,.16), transparent 60%),
+    radial-gradient(1000px 620px at 110% 4%, rgba(56,189,248,.14), transparent 60%),
+    radial-gradient(900px 900px at 50% 122%, rgba(167,139,250,.10), transparent 60%),
+    linear-gradient(180deg,#f4f7ff,#eef2f8);
+}
+:root[data-theme="dark"] #cosmos{
+  background:
+    radial-gradient(1100px 700px at 8% -6%, rgba(99,102,241,.30), transparent 55%),
+    radial-gradient(1000px 680px at 112% 3%, rgba(14,165,233,.28), transparent 55%),
+    radial-gradient(920px 720px at 80% 120%, rgba(168,85,247,.30), transparent 55%),
+    linear-gradient(180deg,#070a18,#0a0f22);
+}
+.wrap{max-width:1180px; margin:0 auto; padding-block:2rem; padding-left:20px; padding-right:20px;}
+
+/* ---- 헤더 ---- */
+.hero{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg);
+  box-shadow:var(--sh-lg); padding:2rem 1.6rem; text-align:center; position:relative; overflow:hidden;
+}
+:root[data-theme="dark"] .hero{backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);}
+.hero::before{content:""; position:absolute; inset:0 0 auto 0; height:5px;
+  background:linear-gradient(90deg,var(--c-primary),var(--violet),var(--c-primary));}
+.eyebrow{display:inline-block; font-size:.76rem; font-weight:800; letter-spacing:.08em;
+  color:var(--c-primary-strong); background:var(--c-primary-050);
+  border:1px solid var(--c-primary-border); border-radius:var(--r-pill); padding:.2rem .8rem; margin-bottom:.7rem;}
+h1{margin:.2rem 0 .3rem; font-size:2rem; line-height:1.25; color:var(--ink); letter-spacing:-.02em;}
+.hero .en{color:var(--ink-3); font-size:1rem; margin:0 0 .5rem;}
+.hero .meta{color:var(--ink-3); font-size:.9rem;}
+@media(min-width:768px){ h1{font-size:2.5rem} }
+
+/* ---- 진도 ---- */
+.progress-box{margin-top:1.2rem; background:var(--c-primary-050); border:1px solid var(--c-primary-border);
+  border-radius:var(--r-md); padding:.85rem 1.1rem;}
+.progress-head{display:flex; flex-wrap:wrap; gap:.5rem; align-items:baseline; justify-content:center;
+  font-size:.9rem; color:var(--ink-2);}
+.progress-head b{color:var(--c-primary-strong); font-size:1.15rem;}
+.bar{margin-top:.6rem; height:9px; border-radius:var(--r-pill); background:var(--c-primary-100); overflow:hidden;}
+.bar>span{display:block; height:100%; border-radius:var(--r-pill);
+  background:linear-gradient(90deg,var(--c-primary),var(--violet)); transition:width .5s ease;}
+
+/* ---- 검색 ---- */
+.tools{margin:1.6rem 0 1rem; display:flex; flex-wrap:wrap; gap:.6rem; align-items:center; justify-content:space-between;}
+.search{flex:1 1 260px; position:relative;}
+.search input{width:100%; padding:.7rem 1rem .7rem 2.4rem; font-size:.95rem; font-family:inherit;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r-pill); box-shadow:var(--sh-sm); outline:none;}
+.search input:focus{border-color:var(--c-primary); box-shadow:0 0 0 3px var(--c-primary-100);}
+.search svg{position:absolute; left:.85rem; top:50%; transform:translateY(-50%); width:16px; height:16px;
+  fill:none; stroke:var(--ink-4); stroke-width:2;}
+.count{font-size:.85rem; color:var(--ink-3); white-space:nowrap;}
+
+/* ---- 카드 ---- */
+.grid{display:grid; grid-template-columns:1fr; gap:1rem;}
+@media(min-width:640px){ .grid{grid-template-columns:repeat(2,1fr)} }
+@media(min-width:1024px){ .grid{grid-template-columns:repeat(3,1fr)} }
+.card{display:flex; flex-direction:column; gap:.45rem; text-decoration:none; color:inherit;
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--c-primary);
+  border-radius:var(--r-md); box-shadow:var(--sh-sm); padding:1rem 1.1rem;
+  transition:transform .15s, box-shadow .15s, border-color .15s;}
+:root[data-theme="dark"] .card{backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);}
+.card.open:hover{transform:translateY(-3px); box-shadow:var(--sh-md); border-left-color:var(--violet);}
+.card.soon{border-left-color:var(--ink-4); opacity:.72; cursor:default;}
+.c-top{display:flex; align-items:center; gap:.55rem; flex-wrap:wrap;}
+.c-num{font-size:.72rem; font-weight:800; letter-spacing:.06em; color:var(--c-primary-strong);
+  background:var(--c-primary-050); border:1px solid var(--c-primary-border);
+  border-radius:var(--r-sm); padding:.1rem .5rem;}
+.card.soon .c-num{color:var(--ink-3); background:transparent; border-color:var(--line);}
+.c-state{margin-left:auto; font-size:.7rem; font-weight:800; border-radius:var(--r-pill); padding:.1rem .6rem;
+  border:1px solid var(--green); color:var(--green); background:var(--green-bg);}
+.card.soon .c-state{border-color:var(--line); color:var(--ink-4); background:transparent;}
+.c-kr{font-size:1.18rem; font-weight:800; color:var(--ink); line-height:1.35;}
+.c-en{font-size:.8rem; color:var(--ink-4); margin-top:-.25rem;}
+.c-desc{font-size:.88rem; color:var(--ink-3); line-height:1.6;}
+.c-foot{margin-top:auto; padding-top:.5rem; border-top:1px dashed var(--line);
+  display:flex; align-items:center; gap:.5rem; font-size:.78rem; color:var(--ink-4);}
+.c-go{margin-left:auto; font-weight:800; color:var(--c-primary-strong);}
+.card.soon .c-go{color:var(--ink-4);}
+.empty{grid-column:1/-1; text-align:center; color:var(--ink-4); padding:2.5rem 1rem; font-size:.95rem;}
+
+/* ---- 안내 ---- */
+.note{margin-top:1.4rem; background:var(--violet-bg); border:1px solid var(--violet-border);
+  border-left:5px solid var(--violet); border-radius:var(--r-md); padding:.9rem 1.1rem; font-size:.87rem; color:var(--ink-2);}
+.note b{color:var(--violet);}
+
+/* ---- 푸터 ---- */
+footer{margin-top:2rem; text-align:center; color:var(--ink-4); font-size:.83rem; padding-bottom:1.5rem;}
+.foot-links{display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin:.9rem 0 .7rem;}
+.foot-link{display:inline-block; font-size:.84rem; font-weight:700; text-decoration:none;
+  padding:.35rem .9rem; border-radius:var(--r-pill);
+  border:1px solid var(--c-primary-border); background:var(--c-primary-050); color:var(--c-primary-strong);
+  transition:background .15s, border-color .15s;}
+.foot-link:hover{background:var(--c-primary-100); border-color:var(--c-primary);}
+.foot-brand{font-weight:800; color:var(--ink-2);}
+
+/* ---- 테마 토글 ---- */
+#themeToggle{position:fixed; top:18px; right:18px; z-index:50; width:42px; height:42px;
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+  border-radius:var(--r-pill); border:1px solid var(--line); background:var(--surface);
+  box-shadow:var(--sh-md); color:var(--ink-2);}
+#themeToggle svg{width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round;}
+#themeToggle .ico-sun{display:none;}
+:root[data-theme="dark"] #themeToggle .ico-sun{display:block;}
+:root[data-theme="dark"] #themeToggle .ico-moon{display:none;}
+
+@media print{
+  #cosmos,#themeToggle,.tools,.foot-links{display:none !important;}
+  body{background:#fff;} .card{break-inside:avoid; box-shadow:none;}
+}
+</style>
+</head>
+<body>
+<script>(function(){var r=document.documentElement,t=null;try{t=localStorage.getItem("neuroanat-hub-theme");}catch(e){}
+if(t!=="dark"&&t!=="light"){t=(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";}
+r.setAttribute("data-theme",t);})();</script>
+<div id="cosmos"></div>
+
+<button id="themeToggle" type="button" aria-label="라이트/다크 전환">
+  <svg class="ico-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  <svg class="ico-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</button>
+
+<div class="wrap">
+  <header class="hero">
+    <span class="eyebrow">2026-2 · 안산대학교 물리치료학과</span>
+    <h1>신경해부학 학습 허브</h1>
+    <p class="en">Neuroanatomy · Chapter Summaries for Students</p>
+    <p class="meta">강의록 Ch01~Ch13 핵심요약 · 심경섭 교수</p>
+    <div class="progress-box">
+      <div class="progress-head"><span>공개된 챕터</span> <b id="pgNum">0 / 13</b> <span id="pgPct">0%</span></div>
+      <div class="bar"><span id="pgBar" style="width:0%"></span></div>
+    </div>
+  </header>
+
+  <div class="tools">
+    <label class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="챕터 · 용어로 찾기 — 소뇌, 자율신경, 뇌신경, basal ganglia …" aria-label="챕터 검색">
+    </label>
+    <span class="count" id="cnt"></span>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="note">
+    <b>이 자료를 읽는 법</b><br>
+    각 챕터 요약은 강의록과 한 줄씩 대조해 만듭니다. 값이 갈리는 자리는 <b>교재 값을 본문에 싣고</b> 표준 문헌 값을 각주로 병기하며,
+    강의록에 없는 보강 내용은 <b>보라색 표시와 별도 절</b>로 분리해 시험범위와 구분합니다.
+    시험 답안은 언제나 <b>강의록과 교재</b>를 기준으로 하세요.
+  </div>
+
+  <footer>
+    <div class="foot-links">
+      <a class="foot-link" href="https://gss-edu-v2.vercel.app/" target="_blank" rel="noopener">🏫 캠퍼스 메타버스</a>
+      <a class="foot-link" href="https://physi.ansan.ac.kr/physi" target="_blank" rel="noopener">🎓 물리치료학과 홈페이지</a>
+      <a class="foot-link" href="https://physi.ansan.ac.kr/physi/roadmap" target="_blank" rel="noopener">📘 교육과정·로드맵</a>
+    </div>
+    <div class="foot-brand">신경해부학 · 2026-2 · 물리치료학과 심경섭 교수</div>
+    <div>주교재 · 신경해부생리학 편찬위원회. 『신경과학의 이해 신경해부생리학』제3판. 2025.</div>
+    <div>© 2026 Department of Physical Therapy · 교육 · 학습용</div>
+  </footer>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   챕터 목록 — 새 챕터를 공개할 때는 아래 배열에서 url만 채우면 됩니다.
+   챕터 요약본은 GitHub 저장소 NA-chXX의 Pages 주소를 씁니다
+   (예: https://gssim11.github.io/NA-ch04/).
+   url이 비어 있으면(""), 자동으로 "준비 중"으로 표시됩니다.
+   캠퍼스 메타버스는 이 허브 한 곳만 링크하므로 손댈 필요가 없습니다.
+   ══════════════════════════════════════════════════════════════ */
+var CHAPTERS = [
+  {n:1,  kr:"신경계의 발생과 구성", en:"Composition and Development of the Nervous System",
+   desc:"구조 → 발생 → 발달 → 조직. 신경관과 신경능선에서 중추와 말초가 갈린다.", slides:51,
+   url:"https://gssim11.github.io/NA-ch01/"},
+  {n:2,  kr:"신경생리의 원리 및 연접 전달", en:"Principles of Neurophysiology and Synaptic Transmission",
+   desc:"1강의 '구조'가 이번에는 '전기 신호'로 이어진다. 안정막전위·활동전위·연접전달.", slides:35,
+   url:"https://gssim11.github.io/NA-ch02/"},
+  {n:3,  kr:"대뇌", en:"Cerebrum",
+   desc:"세포에서 구조로 — 오늘부터 실제 뇌의 지형을 읽는다.", slides:39,
+   url:"https://gssim11.github.io/NA-ch03/"},
+  {n:4,  kr:"사이뇌", en:"Diencephalon",
+   desc:"후각을 제외한 모든 감각이 반드시 지나는 관문.", slides:33, url:""},
+  {n:5,  kr:"바닥핵", en:"Basal Ganglia",
+   desc:"움직임을 만드는 곳이 아니라, 어떤 움직임을 고를지 정하는 곳.", slides:27, url:""},
+  {n:6,  kr:"뇌줄기", en:"Brainstem",
+   desc:"생명이 지나가는 좁은 길 — 작은 병변이 큰 결손을 만드는 곳.", slides:26, url:""},
+  {n:7,  kr:"소뇌", en:"Cerebellum",
+   desc:"움직임을 만들지 않고, 만들어진 움직임을 비교·교정하는 곳.", slides:33, url:""},
+  {n:8,  kr:"척수", en:"Spinal Cord",
+   desc:"뇌의 명령이 도착하고 몸의 감각이 출발하는, 31개 분절의 통로.", slides:34, url:""},
+  {n:9,  kr:"뇌신경", en:"Cranial Nerves",
+   desc:"머리와 얼굴을 맡는 12쌍 — 각자 다른 구멍으로 나가 각자 다른 일을 한다.", slides:37, url:""},
+  {n:10, kr:"척수신경", en:"Spinal Nerves",
+   desc:"31쌍이 얼기를 이루어 다시 짜인다 — 근육 하나에 분절 여럿.", slides:33, url:""},
+  {n:11, kr:"자율신경계", en:"Autonomic Nervous System",
+   desc:"의식하지 않아도 심장은 뛰고, 창자는 움직이고, 땀은 난다.", slides:27, url:""},
+  {n:12, kr:"수막, 뇌실, 뇌척수액과 혈액공급", en:"Meninges, Ventricles, CSF and Blood Supply",
+   desc:"뇌를 감싸고, 띄우고, 먹여 살리는 세 가지 장치.", slides:30, url:""},
+  {n:13, kr:"종강 · 종합과 임상통합", en:"Synthesis and Clinical Integration",
+   desc:"구조에서 증상으로, 증상에서 다시 구조로 · 통증조절·신경가소성 보강 포함.", slides:39, url:""}
+];
+
+(function(){
+  var grid=document.getElementById("grid"), q=document.getElementById("q"), cnt=document.getElementById("cnt");
+  function pad(n){ return (n<10?"0":"")+n; }
+  function isOpen(c){ return !!c.url && c.url.indexOf("[")!==0; }
+
+  function render(list){
+    grid.innerHTML="";
+    if(!list.length){
+      var e=document.createElement("div"); e.className="empty";
+      e.textContent="검색 결과가 없습니다."; grid.appendChild(e); cnt.textContent=""; return;
+    }
+    list.forEach(function(c){
+      var open=isOpen(c);
+      var el=document.createElement(open?"a":"div");
+      el.className="card "+(open?"open":"soon");
+      if(open){ el.href=c.url; el.target="_blank"; el.rel="noopener"; }
+      el.innerHTML=
+        '<div class="c-top"><span class="c-num">CHAPTER '+pad(c.n)+'</span>'+
+        '<span class="c-state">'+(open?"공개":"준비 중")+'</span></div>'+
+        '<div class="c-kr">'+c.kr+'</div>'+
+        '<div class="c-en">'+c.en+'</div>'+
+        '<div class="c-desc">'+c.desc+'</div>'+
+        '<div class="c-foot"><span>강의록 '+c.slides+'쪽</span>'+
+        '<span class="c-go">'+(open?"핵심요약 열기 →":"준비 중")+'</span></div>';
+      grid.appendChild(el);
+    });
+    cnt.textContent=list.length+"개 챕터";
+  }
+
+  function apply(){
+    var v=(q.value||"").trim().toLowerCase();
+    if(!v){ render(CHAPTERS); return; }
+    render(CHAPTERS.filter(function(c){
+      return (c.kr+" "+c.en+" "+c.desc+" ch"+pad(c.n)+" "+c.n).toLowerCase().indexOf(v)>-1;
+    }));
+  }
+  q.addEventListener("input", apply);
+
+  var opened=CHAPTERS.filter(isOpen).length, total=CHAPTERS.length;
+  var pct=Math.round(opened/total*100);
+  document.getElementById("pgNum").textContent=opened+" / "+total;
+  document.getElementById("pgPct").textContent=pct+"%";
+  document.getElementById("pgBar").style.width=pct+"%";
+
+  render(CHAPTERS);
+
+  var btn=document.getElementById("themeToggle");
+  btn.addEventListener("click", function(){
+    var r=document.documentElement;
+    var t=r.getAttribute("data-theme")==="dark"?"light":"dark";
+    r.setAttribute("data-theme",t);
+    try{ localStorage.setItem("neuroanat-hub-theme",t); }catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
