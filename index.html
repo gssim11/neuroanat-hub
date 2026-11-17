@@ -115,6 +115,17 @@ h1{margin:.2rem 0 .3rem; font-size:2rem; line-height:1.25; color:var(--ink); let
 :root[data-theme="dark"] .card{backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);}
 .card.open:hover{transform:translateY(-3px); box-shadow:var(--sh-md); border-left-color:var(--violet);}
 .card.soon{border-left-color:var(--ink-4); opacity:.72; cursor:default;}
+.card-wrap{display:flex; flex-direction:column; gap:.5rem;}
+.card-wrap > .card{flex:1;}
+.c-extra{display:flex; align-items:center; gap:.55rem; text-decoration:none; color:var(--ink-2);
+  background:var(--surface); border:1px dashed var(--line); border-left:5px solid var(--violet);
+  border-radius:var(--r-md); padding:.55rem .9rem; font-size:.84rem; transition:transform .15s, box-shadow .15s;}
+.c-extra:hover{transform:translateY(-2px); box-shadow:var(--sh-md);}
+.c-extra .x-tag{font-size:.68rem; font-weight:800; color:var(--violet); border:1px solid var(--violet);
+  border-radius:var(--r-pill); padding:0 .5rem; white-space:nowrap;}
+.c-extra b{color:var(--ink); font-weight:800;}
+.c-extra .x-go{margin-left:auto; font-weight:800; color:var(--violet); white-space:nowrap;}
+:root[data-theme="dark"] .c-extra{backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);}
 .c-top{display:flex; align-items:center; gap:.55rem; flex-wrap:wrap;}
 .c-num{font-size:.72rem; font-weight:800; letter-spacing:.06em; color:var(--c-primary-strong);
   background:var(--c-primary-050); border:1px solid var(--c-primary-border);
@@ -241,7 +252,8 @@ var CHAPTERS = [
    url:"https://na-ch05.vercel.app/"},
   {n:6,  kr:"뇌줄기", en:"Brainstem",
    desc:"생명이 지나가는 좁은 길 — 작은 병변이 큰 결손을 만드는 곳.", slides:26,
-   url:"https://na-ch06.vercel.app/"},
+   url:"https://na-ch06.vercel.app/",
+   extras:[{label:"가쪽숨뇌증후군(왈렌버그증후군)", sub:"단면 · 교차 원리 · 증상 실험", url:"https://na-ch06.vercel.app/wallenberg.html"}]},
   {n:7,  kr:"소뇌", en:"Cerebellum",
    desc:"움직임을 만들지 않고, 만들어진 움직임을 비교·교정하는 곳.", slides:33,
    url:"https://na-ch07.vercel.app/"},
@@ -283,7 +295,19 @@ var CHAPTERS = [
         '<div class="c-desc">'+c.desc+'</div>'+
         '<div class="c-foot"><span>강의록 '+c.slides+'쪽</span>'+
         '<span class="c-go">'+(open?"핵심요약 열기 →":"준비 중")+'</span></div>';
-      grid.appendChild(el);
+      if(open && c.extras && c.extras.length){
+        var wrap=document.createElement("div"); wrap.className="card-wrap";
+        wrap.appendChild(el);
+        c.extras.forEach(function(x){
+          var a=document.createElement("a"); a.className="c-extra";
+          a.href=x.url; a.target="_blank"; a.rel="noopener";
+          a.innerHTML='<span class="x-tag">보충</span><span><b>'+x.label+'</b>'+(x.sub?' · '+x.sub:'')+'</span><span class="x-go">열기 →</span>';
+          wrap.appendChild(a);
+        });
+        grid.appendChild(wrap);
+      } else {
+        grid.appendChild(el);
+      }
     });
     cnt.textContent=list.length+"개 챕터";
   }
@@ -292,7 +316,8 @@ var CHAPTERS = [
     var v=(q.value||"").trim().toLowerCase();
     if(!v){ render(CHAPTERS); return; }
     render(CHAPTERS.filter(function(c){
-      return (c.kr+" "+c.en+" "+c.desc+" ch"+pad(c.n)+" "+c.n).toLowerCase().indexOf(v)>-1;
+      var ex=(c.extras||[]).map(function(x){return x.label+" "+(x.sub||"");}).join(" ");
+      return (c.kr+" "+c.en+" "+c.desc+" "+ex+" ch"+pad(c.n)+" "+c.n).toLowerCase().indexOf(v)>-1;
     }));
   }
   q.addEventListener("input", apply);
